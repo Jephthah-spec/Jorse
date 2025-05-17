@@ -1,3 +1,4 @@
+/* Styling with the universal selector */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -11,6 +12,7 @@
     --main-color: rgba(0, 0, 0, 0.897);
     --additional-color: lightblue;
     --input-color: rgb(48, 47, 47);
+    --bot-reply: grey;
 }
 /* Styling the body*/
 body{
@@ -53,7 +55,13 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-/* Styling the chatbot reply */
+/* Styling the logo */
+img{
+    width: 75px;
+    height: 60px;
+    border-radius: 20px;
+}
+/* Styling the chatbox */
 #chatbox{
     display: flex;
     flex: 1;
@@ -65,14 +73,16 @@ header{
     overflow-y: auto;
     padding: 10px 25px;
 }
+/* Styling the chatbot default greeting */
 #chatmessage{
-    width: 40%;
-    background-color: var(--additional-color);
-    border-radius: 20px;
+    max-width: 80%;
+    background-color: var(--bot-reply);
+    border-radius: 0 15px 15px 15px;
     padding: 5px;
-    text-align: center;
+    box-shadow: 0 0 9px var(--additional-color);
+    
 }
-/* Styling th form */
+/* Styling the form */
 form{
     width: 100%;
     display: flex;
@@ -97,7 +107,7 @@ form{
 #userInput:focus{
     outline: 1px solid var(--additional-color);
 }
-/* Styling the button */
+/* Styling the submit button */
 button{
     display: flex;
     justify-self: right;
@@ -120,8 +130,8 @@ button:hover{
 button:active{
     transform: scale(0.9);
 }
+/* Styling the sent message and replies from the chatbot */
 .user-message, .bot{
-    border-radius: 20px;
     max-width: 80%;
     padding: 10px;
 }
@@ -129,12 +139,15 @@ button:active{
     align-self :flex-end;
     background-color: var(--additional-color);
     box-shadow: 0 0 10px var(--additional-color);
+    border-radius: 15px 0 15px 15px;
 }
 .bot{
     align-self: flex-start;
-    background-color: grey;
+    background-color: var(--bot-reply);
     box-shadow: 0 0 10px var(--additional-color);
+    border-radius: 0 15px 15px 15px;
 }
+/* styling the button to change background color */
 #changeColor{
     width: fit-content;
 }

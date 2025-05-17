@@ -1,7 +1,9 @@
+// Variables holding the DOM elements
 const chatbox = document.getElementById("chatbox");
 const userInput = document.getElementById("userInput");
 const userForm = document.getElementById("userForm");
 
+// Event listener for the form submission
 userForm.addEventListener("submit", function (e) {
     e.preventDefault()
     const message = userInput.value.trim();
@@ -16,6 +18,7 @@ userForm.addEventListener("submit", function (e) {
     }
 })
 
+// Function to add a message to the chatbox
 function addMessage(sender, text) {
     const newMesage = document.createElement("div")
     newMesage.className = sender == "user" ?"user-message" :"bot"
@@ -24,9 +27,11 @@ function addMessage(sender, text) {
     chatbox.scrollTop = chatbox.scrollHeight;
 }
 
+// Function to respond to the user's message
 function respond(message) {
     let response;
 
+    // Programmed responses from the chatbot
     if (message.includes("hello") || message.includes ("Hi") || message.includes("Hello") || message.includes ("hi") ) {
        response = "Hello, what can I do for you today"
     }else if (message.includes("how are you") || message.includes("How are you") || message.includes("sup") || message.includes ("Sup")) {
@@ -47,14 +52,17 @@ function respond(message) {
     }, 1000);
 }
 
-  let container= document.getElementById("container");
+// Variables holding the DOM element housing everything
+let container= document.getElementById("container");
+
+// Event listeners for changing the background color of the container
 document.getElementById("changeColor").addEventListener("click", function changeColor () {
   
         container.style.backgroundColor = "white"
 
 })
 
-
-    document.getElementById("changeColor").addEventListener("auxclick", function changColor(){
+// Event listener for changing the background color of the container on auxiliary click (middle mouse button)
+document.getElementById("changeColor").addEventListener("auxclick", function changeColor(){
         container.style.backgroundColor = "black"
-    })
+})

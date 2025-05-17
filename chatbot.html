@@ -5,22 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jorse ChatBot</title>
     <link rel="stylesheet" href="chatbot.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/jorse-chatbot.png" type="image/x-icon">
 </head>
 <body>
     <!-- Creating the container div -->
     <div id="container">
+        <!-- Creating the header-->
         <header>
+
+            <!-- Logo of the chatbot -->
+            <img src="images/jorse-chatbot.png" alt="image of chatbot">
+
+            <!-- Title of the chatbot -->
             <h3>Jorse Chatbot</h3> 
+            <!--  -->
+
+            <!-- Button to dynamically change background color -->
             <button id="changeColor">🌓</button>
         </header>
+        <!-- Done with the header -->
+
+        <!-- Creating the div to house the chats -->
         <div id="chatbox">
+
+            <!-- Default greeting from the bot -->
             <div id="chatmessage">Hello👋, I am Jorse ChatBot</div>
         </div>
+        <!-- Done with the chat div-->
+
+        <!-- Form to input chats -->
         <form id="userForm">
             <input type="text" id="userInput" placeholder="Type your message here..." autocomplete="off" autofocus = "on">
             <button type="submit">Send</button>
         </form>
+        <!-- Done with the form -->
     </div>
     <script src="chatbot.js"></script>
 </body>
