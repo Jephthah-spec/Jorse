@@ -146,6 +146,17 @@ button:active{
     background-color: var(--bot-reply);
     box-shadow: 0 0 10px var(--additional-color);
     border-radius: 0 15px 15px 15px;
+    animation-name: bot;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+}
+@keyframes bot {
+    0%{
+        transform: scale(0.3);
+    }
+    50%{
+        transform: scale(0.9);
+    }
 }
 /* styling the button to change background color */
 #changeColor{

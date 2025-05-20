@@ -13,16 +13,16 @@ userForm.addEventListener("submit", function (e) {
         return;
     }else{
         addMessage('user', message);
-    respond(message);
-    userInput.value = '';
+        respond(message);
+        userInput.value = ' ';
     }
 })
 
 // Function to add a message to the chatbox
-function addMessage(sender, text) {
+function addMessage(sender, input) {
     const newMesage = document.createElement("div")
     newMesage.className = sender == "user" ?"user-message" :"bot"
-    newMesage.innerText = text;
+    newMesage.innerText = input;
     chatbox.appendChild (newMesage);
     chatbox.scrollTop = chatbox.scrollHeight;
 }
